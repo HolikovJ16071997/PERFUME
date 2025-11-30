@@ -1,43 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,100..900,0..100;1,9..144,100..900,0..100&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* globol */
-html{
-    box-sizing: border-box;
-    height: 100%;
-    scroll-behavior: smooth;
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 *,
 *::before,
-*::after{
-    box-sizing: inherit;
-
+*::after {
+  box-sizing: inherit;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #fff;
-    color: #222;
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #f2eae2;
+  color: #222;
 }
-img{
-    max-width: 100%;
-    height: auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* conteiner */
 
-.conteiner{
-    width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
 }
 
 /* main_content */
-.main_content{
-    flex-grow: 1;
+.main_content {
+  flex-grow: 1;
+}
+
+/* card */
+
+.site-box {
+}
+.card-site {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+}
+.img-card {
+  border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -ms-border-radius: 10px 0px 0px 10px;
+  -o-border-radius: 10px 0px 0px 10px;
+}
+.box-card {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 0 10px 10px 0px;
+  background: #fff;
+  padding: 32px;
+  -webkit-border-radius: 0 10px 10px 0px;
+  -moz-border-radius: 0 10px 10px 0px;
+  -ms-border-radius: 0 10px 10px 0px;
+  -o-border-radius: 0 10px 10px 0px;
+}
+.box-heading {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 5px;
+  color: #6c7289;
+  margin-bottom: 20px;
+}
+.box-titel {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+}
+.box-dicription {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0px;
+  margin-bottom: 29px;
+}
+.box-mani {
+  padding: 0;
+  margin-bottom: 30px;
+}
+.price1 {
+  font-family: Fraunces;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #3d8168;
+}
+.price1::after {
+  content: "$169.99";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  text-decoration: line-through;
+  padding: 19px;
+  color: #6c7289;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 236px;
+  padding: 15px;
+  border: 0;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  background: #3d8168;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transform: 1s all;
+  -webkit-transform: 1s all;
+  -moz-transform: 1s all;
+  -ms-transform: 1s all;
+  -o-transform: 1s all;
+}
+.button:hover {
+  background: #1a4032;
+}
+.button:active {
+  opacity: 0.6;
+  background: #1a4032;
+}
+.button img {
+  margin-right: 5px;
+}
+@media (max-width: 1024px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ .box-card, .img-card{
+    border-radius: 0 0px 0px 0px;
+    -webkit-border-radius: 0 0px 0px 0px;
+    -moz-border-radius: 0 0px 0px 0px;
+    -ms-border-radius: 0 0px 0px 0px;
+    -o-border-radius: 0 0px 0px 0px;
+}
+}
+
+@media (max-width: 768px) {
+      .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ .box-card, .img-card{
+    border-radius: 0 0px 0px 0px;
+    -webkit-border-radius: 0 0px 0px 0px;
+    -moz-border-radius: 0 0px 0px 0px;
+    -ms-border-radius: 0 0px 0px 0px;
+    -o-border-radius: 0 0px 0px 0px;
+}
+   .img-card{
+    
+   }
 }
